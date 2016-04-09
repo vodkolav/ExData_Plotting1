@@ -1,0 +1,6 @@
+source('readData.R')
+par(mfrow = c(1,1))
+consumption <- readData()
+hist(consumption$Global_active_power, col = 'red', xlab = 'Global Active Power (kilowatts)',main = 'Global Active Power')
+dev.copy(png,'plot1.png')
+dev.off()
